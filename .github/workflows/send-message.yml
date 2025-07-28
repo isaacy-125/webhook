@@ -34,12 +34,7 @@ jobs:
           import json
           
           url = \"$WEBHOOK_URL\"
-          data = {
-              \"msgtype\": \"text\",
-              \"text\": {
-                  \"content\": \"$CONTENT\"
-              }
-          }
+          data = \"$CONTENT\"
           
           response = requests.post(url, json=data)
           print(\"Response status code:\", response.status_code)
